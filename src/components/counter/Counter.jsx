@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 
 const colors = ['red', 'green', 'blue'];
 
-function Counter() {
-  const [count, setCount] = useState(5);
+function Counter(props) {
+  const pradineReiksme = props.initValue ? props.initValue : 5
+  const [count, setCount] = useState(pradineReiksme);
   // let count = 5
   const [currentColor, setCurrentColor] = useState(0);
 
@@ -40,6 +41,7 @@ function Counter() {
   return (
     <div className='counter'>
       <h3>{colors[currentColor]}</h3>
+      <h2 >{props.title}</h2>
       <h2 className={(dynamicClass, green)}>{count}</h2>
       <div className='control'>
         <button onClick={upHandler}>UP</button>

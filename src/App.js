@@ -8,8 +8,8 @@ function App() {
       <h1>App react</h1>
       <div className='grid'>
         <Counter title='people'/>
-        <Counter title='cars'/>
-        <Counter title='house'/>
+        <Counter title='cars' initValue={10}/>
+        <Counter title='house' initValue={15}/>
       </div>
       <ReactForm/>
     </div>
